@@ -3,16 +3,18 @@
 const TrafficLight =({color}) => {
 
     const getMessage = () => {
-        switch (color){
-            case 'red':
-              return 'STOP';
-             case 'yellow':
-               return 'SLOW DOWN';
-            case 'green':
-               return 'GO';
-            default:
-               return 'UNKNOWN COLOR';
-        }
+      let message;
+        
+      if (color === 'red') {
+        message = 'STOP';
+      } else if (color === 'yellow') {
+        message = 'SLOW DOWN';
+      } else if (color === 'green') {
+        message = 'GO';
+      } else {
+        message = 'UNKNOWN COLOR';
+      }
+    return message;
     };
 
     return (
